@@ -30,4 +30,6 @@ public abstract class Instrucoes1op extends ModosDeEnderecamento{
 	
 	public abstract String ConstruirInstrucaoBinaria();
 	
+	// fazer lógica dos registradores 
+	// terminar tabela de simbolos
 }
