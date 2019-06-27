@@ -1,12 +1,6 @@
 package instruçõesEspeciais;
 
-import java.util.ArrayList;
-
 public class Hlt extends InstrucoesEspeciais{
-
-	public String first4bits;
-	public String xaux;
-	public ArrayList<String> xx = new ArrayList<String>();
 	
 	public Hlt() {
 		this.first4bits = "1111";

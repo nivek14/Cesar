@@ -1,13 +1,7 @@
 package instruçõesEspeciais;
 
 public class Ccc extends InstrucoesEspeciais{
-	
-	public String first4bits;
-	public String c;
-	public String v;
-	public String z;
-	public String n;
-	
+
 	public Ccc() {
 		this.first4bits = "0001";
 	}

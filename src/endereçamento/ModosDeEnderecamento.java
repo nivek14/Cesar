@@ -5,15 +5,15 @@ import java.util.Collections;
 
 public class ModosDeEnderecamento {
 	
-	protected String reg;	// modo de endereçamento registrador
-	protected String rpi;	// modo de endereçamento registrador pós-incrementado
-	protected String rpd;	// modo de endereçamento registrador pré-incrementado
-	protected String inx;	// modo de endereçamento indexado
-	protected String ind;	// modo de endereçamento registrador indireto
-	protected String pii;	// modo de endereçamento pós-incrementado indireto
-	protected String pdi;	// modo de endereçamento pré-decrementado indireto
-	protected String ixi;	// modo de endereçamento indexado indireto
-	protected ArrayList<String> tipoEnd = new ArrayList<String>();
+	private String reg;	// modo de endereçamento registrador
+	private String rpi;	// modo de endereçamento registrador pós-incrementado
+	private String rpd;	// modo de endereçamento registrador pré-incrementado
+	private String inx;	// modo de endereçamento indexado
+	private String ind;	// modo de endereçamento registrador indireto
+	private String pii;	// modo de endereçamento pós-incrementado indireto
+	private String pdi;	// modo de endereçamento pré-decrementado indireto
+	private String ixi;	// modo de endereçamento indexado indireto
+	private ArrayList<String> tipoEnd = new ArrayList<String>();
 	
 	public ModosDeEnderecamento() {
 		this.reg = "000";
@@ -48,5 +48,44 @@ public class ModosDeEnderecamento {
 		return tipoEnd.get(val);
 			
 	}
+
+    // Acrescentei esse getters pra poder pegar o código do modo.
+    public String getReg() {
+        return reg;
+    }
+
+    public String getRpi() {
+        return rpi;
+    }
+
+    public String getRpd() {
+        return rpd;
+    }
+
+    public String getInx() {
+        return inx;
+    }
+
+    public String getInd() {
+        return ind;
+    }
+
+    public String getPii() {
+        return pii;
+    }
+
+    public String getPdi() {
+        return pdi;
+    }
+
+    public String getIxi() {
+        return ixi;
+    }
+
+    public ArrayList<String> getTipoEnd() {
+        return tipoEnd;
+    }
+        
+        
 
 }

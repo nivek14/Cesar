@@ -21,6 +21,12 @@ public abstract class Instrucoes2op extends ModosDeEnderecamento{
 	// 4 primeiros bits que identificam a instrução
 	public String first4bits;
 	
+	//private BancoDeRegistradores aux;
+	
+	//private int r_destino;
+	
+	//private int r_fonte;
+	
 	
 	public Instrucoes2op(){
 		mmm1 = super.BitsModoDeEnderecamento();	// pega os bits do endereçamento do primeiro operando
@@ -30,6 +36,17 @@ public abstract class Instrucoes2op extends ModosDeEnderecamento{
 	}
 
 	public abstract String ConstruirInstrucaoBinaria();
+	
+	public abstract void operacao();
+     
+    public abstract int getR_destino();
+ 
+    public abstract void setR_destino(int r_destino);
+
+    public abstract int getR_fonte();
+
+    public abstract void setR_fonte(int r_fonte);
+    
 		
 
 }
