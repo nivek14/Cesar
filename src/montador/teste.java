@@ -17,6 +17,7 @@ public class teste {
 		mont.PassaArquivoMnemonio();
 		mont.PrintVetorPassado();
 		System.out.printf("\n");
+		mont.RetornaBitsEnderecamento();
 		
 		//ler.lerArquivo();
 		//ler.mostrarLinhas();

@@ -38,6 +38,10 @@ public class Montador {
 		converte.VerificaArray();
 	}
 	
+	public void RetornaBitsEnderecamento() {
+		converte.VerificaBitsEnderecamento();
+	}
+	
 	
 
 }
