@@ -54,12 +54,13 @@ public class Simbolo {
     * @Author: Rodrigo Ferreira Rodrigues
     * Método usado para pegar os bits dos registradores de uma instruções.
     */
-    public String pegaBits(){
+    public ArrayList<String> pegaBits(){
         int i;
+        ArrayList<String> bit = new ArrayList<String>();
         for(i = 0; i < nroReg;i++){
-            return this.bits.get(i);
+            bit.add(this.bits.get(i));
         }
-        return null;
+        return bit; // Retornar um array com os bits da instrução.
     }
     
 }

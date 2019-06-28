@@ -22,6 +22,7 @@ public class TratarBitsRegistradores {
     public TratarBitsRegistradores(ArrayList<String> mnmonicos){
         this.tmp = mnmonicos;
         this.bancoReg = new BancoDeRegistradores();
+        
         // Criar um vetor do tipo simbolo
         // Cada posicao vai guardar um objeto simbolo 
         // que tem o a qtd de registradores e os registradores(bits) em um arrayList

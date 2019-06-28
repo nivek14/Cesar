@@ -51,7 +51,7 @@ public class Montador {
 	}
 	
 	public void Instrucao() {
-		converte.InstrucaoMontadaa();
+		converte.InstrucaoMontada();
 	}
 
 }

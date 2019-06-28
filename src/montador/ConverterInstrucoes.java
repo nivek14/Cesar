@@ -16,6 +16,7 @@ public class ConverterInstrucoes {
 	public ArrayList<String>bitsInstrucao = new ArrayList<String>();
 	public ArrayList<String>codigoBinario = new ArrayList<String>();
 	public ArrayList<String>bitsRegistradores = new ArrayList<String>();
+	public ArrayList<String>aux = new ArrayList<String>();
 	
 	public ConverterInstrucoes(ArrayList<String> instrucoes) {
 		this.instrucoes = instrucoes;
@@ -48,12 +49,14 @@ public class ConverterInstrucoes {
 	
 	// pega os bits dos registradores
 	public void VerificaBitsRegistradores() {
+		
 		int i;
 		
 		simbolos = registrador.bitsRegistradores();
 		
 		for(i=0;i<simbolos.length;i++) {
-			bitsRegistradores.add(simbolos[i].pegaBits());
+			aux = simbolos[i].pegaBits();
+			bitsRegistradores.add(aux.get(i));
 		}
 		
 		System.out.println(bitsRegistradores); 
@@ -61,7 +64,7 @@ public class ConverterInstrucoes {
 	}
 	
 	// monta as instruções
-	public void InstrucaoMontadaa() {
+	public void InstrucaoMontada() {
 		
 		int i,val1,val2,val3,val4;
 		String x1,x2,x3,x4;
