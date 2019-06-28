@@ -12,12 +12,16 @@ public class teste {
 		
 		mont.LerArquivoMnemonio();
 		mont.ArquivoMnemonios();
-		mont.Print();
+		//mont.Print();
 		System.out.printf("\n");
 		mont.PassaArquivoMnemonio();
-		mont.PrintVetorPassado();
+		//mont.PrintVetorPassado();
 		System.out.printf("\n");
 		mont.RetornaBitsEnderecamento();
+		mont.RetornaBitsInstrucoes();
+		mont.RetornaBitsRegistradores();
+		//mont.Instrucao();
+		
 		
 		//ler.lerArquivo();
 		//ler.mostrarLinhas();

@@ -42,6 +42,16 @@ public class Montador {
 		converte.VerificaBitsEnderecamento();
 	}
 	
+	public void RetornaBitsInstrucoes() {
+		converte.VerificaBitsInstrucoes();
+	}
 	
+	public void RetornaBitsRegistradores() {
+		converte.VerificaBitsRegistradores();
+	}
+	
+	public void Instrucao() {
+		converte.InstrucaoMontadaa();
+	}
 
 }

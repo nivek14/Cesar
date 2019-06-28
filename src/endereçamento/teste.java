@@ -1,10 +1,14 @@
 package endereçamento;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
+
+import montador.LerArquivo;
 
 public class teste {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException, IOException {
 		
 		 
 		// Acrescentei:
@@ -12,16 +16,13 @@ public class teste {
         // Deve retornar o codigo de modo endereçamento Registrador: 000
         IdentificaModoDeEnderecamento ident = new IdentificaModoDeEnderecamento();
         ArrayList<String> aux = new ArrayList<String>();
+    	LerArquivo file = new LerArquivo("/home/nivek/Área de Trabalho/Cesar/src/Fibonacci.txt");
+    	
+    	
+    	aux = file.lerArquivo();
         
-        aux.add("MOV R0 R1");
-        aux.add("ADD (R2)+ (R3)+");
-        aux.add("SUB -(R2) -(R3)");
-        aux.add("BNE ddd(R4) ddd(R5)");
-        aux.add("BEQ (R2)");
-        aux.add("NOT (-(R5))");
-        aux.add("AND (ddd(R0))");
-        aux.add("MOV #100");
-        
+        //System.out.println(aux);
+    	
         ident.identificaModo(aux);
         ident.mostraBits();
         
