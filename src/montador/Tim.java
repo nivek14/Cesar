@@ -100,7 +100,7 @@ public class Tim {
         
         for(i = 0; i < mnemonicos.size(); i++){
             array = mnemonicos.get(i).split(" ");
-            System.out.println(array[0]);
+            //System.out.println(array[0]);
             // procura instrução no arraylist de nomes(simblos)
             // se achar coloca o codigo referente a instrução que esta no arrayList codigo no
             // arrayListBits

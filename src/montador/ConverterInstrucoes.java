@@ -35,7 +35,7 @@ public class ConverterInstrucoes {
 	public void VerificaBitsEnderecamento() {
 		bitsEnderecamento = indentifica.identificaModo(instrucoes);
 		//indentifica.mostraBits();
-		System.out.println(bitsEnderecamento);
+		//System.out.println(bitsEnderecamento);
 		//System.out.println();
 	}
 	
@@ -43,41 +43,52 @@ public class ConverterInstrucoes {
 	public void VerificaBitsInstrucoes() {
 		bitsInstrucao = codigoInstrucoes.procurarBits(instrucoes);
 		//codigoInstrucoes.verificarBits();
-		System.out.println(bitsInstrucao);
+		//System.out.println(bitsInstrucao);
 		//System.out.println();
 	}
 	
 	// pega os bits dos registradores
-	public void VerificaBitsRegistradores() {
-		
-		int i;
-		
-		simbolos = registrador.bitsRegistradores();
-		
-		for(i=0;i<simbolos.length;i++) {
-			aux = simbolos[i].pegaBits();
-			bitsRegistradores.add(aux.get(i));
-		}
-		
-		System.out.println(bitsRegistradores); 
-		
+	public void VerificaBitsRegistradores(){
+           
+            simbolos = registrador.bitsRegistradores();
+            ArrayList<String> pointer = null;
+            int i;
+            
+            for(i = 0; i < simbolos.length; i++){
+                pointer = simbolos[i].pegaBits();
+                for(int k = 0; k < pointer.size(); k++){
+                    bitsRegistradores.add(pointer.get(k));
+                }
+            }
+            
+            
+            System.out.println(bitsRegistradores);
+            /* Teus bits estão tudo no arrayList BITSPARAMONTAGEM
+            // Teste aqui para ti ver
+            System.out.println("BITS PARA MONTAGEM");
+            for(i = 0; i < bitsRegistradores.size(); i++){
+                System.out.println(bitsRegistradores.get(i));
+            }*/
 	}
 	
 	// monta as instruções
 	public void InstrucaoMontada() {
 		
-		int i,val1,val2,val3,val4;
+		int i,val1,val2,val3,val4,j=0;
 		String x1,x2,x3,x4;
 		
 		System.out.println(instrucoes.size()); 
 		
-		for(i=0;i<instrucoes.size();i++) {
+		for(i=0;i<instrucoes.size();) {
 			
 			// Montando pra 2 operandos
 			if(bitsInstrucao.get(i).equals("1001") || bitsInstrucao.get(i).equals("1010") ||
 			   bitsInstrucao.get(i).equals("1011") || bitsInstrucao.get(i).equals("1100")||
 			   bitsInstrucao.get(i).equals("1101") || bitsInstrucao.get(i).equals("1110")){
-					codigoBinario.add(bitsInstrucao.get(i) + bitsEnderecamento.get(i));
+					codigoBinario.add(bitsInstrucao.get(i) + bitsEnderecamento.get(i) + bitsRegistradores.get(j) 
+									  + bitsEnderecamento.get(i) + bitsRegistradores.get(j+1));
+					if(bitsRegistradores.get(i+1) != null)
+						j += 2;
 			}
 			
 			// Montando pra 1 operando
@@ -89,7 +100,7 @@ public class ConverterInstrucoes {
 				x1 = Integer.toString(val1);
 				x2 = Integer.toString(val2);
 		
-				codigoBinario.add(bitsInstrucao.get(i) + x1 + x2 + bitsEnderecamento.get(i));
+				codigoBinario.add(bitsInstrucao.get(i) + x1 + x2 + bitsEnderecamento.get(i) + bitsRegistradores.get(i));
 				
 			}
 			

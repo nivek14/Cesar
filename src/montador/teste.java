@@ -20,7 +20,7 @@ public class teste {
 		mont.RetornaBitsEnderecamento();
 		mont.RetornaBitsInstrucoes();
 		mont.RetornaBitsRegistradores();
-		//mont.Instrucao();
+		mont.Instrucao();
 		
 		
 		//ler.lerArquivo();

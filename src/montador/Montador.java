@@ -46,7 +46,7 @@ public class Montador {
 		converte.VerificaBitsInstrucoes();
 	}
 	
-	public void RetornaBitsRegistradores() {
+	public void RetornaBitsRegistradores()  {
 		converte.VerificaBitsRegistradores();
 	}
 	
